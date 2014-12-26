@@ -1,0 +1,235 @@
+body {
+    background: #f7feff;
+}
+
+.map-container {
+    position: absolute;
+    top: 47px;
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+    box-shadow: gray 0px 0px 5px;
+    min-width: 300px;
+    min-height: 200px;
+    background: white;
+    border-radius: 2px;
+}
+
+#pin-panel {
+    font-size: large;
+    font-weight: bold;
+    color: #fefefe;
+    border-radius: 2px 0px 0px 2px;
+    position: absolute;
+    width: 20px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    background: #df4e1b;
+}
+
+    #pin-panel:hover {
+        background: #d44d1e;
+    }
+
+    #pin-panel:active {
+        background: #ce4516;
+    }
+
+    #pin-panel > span {
+        text-align: center;
+        font-size: 22px;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        text-shadow: 1px 1px 1px black;
+        width: 100%;
+    }
+
+#dashboard {
+    width: 154px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    background: #fefefe;
+    z-index: 10;
+    color: #ff0000;
+}
+
+    #dashboard #menu-top {
+        position: absolute;
+        left: 0;
+        height: 51px;
+        top: 0;
+        right: 0;
+        fill: #df4e1b;
+    }
+
+        #dashboard #menu-top .menu-button {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            margin: 1px 0px 1px 0px;
+            text-align: center;
+            padding-top: 9px;
+            cursor: pointer;
+        }
+
+            #dashboard #menu-top .menu-button:hover {
+                background: #e76335;
+                fill: white;
+            }
+
+            #dashboard #menu-top .menu-button:nth-child(1) {
+                right: 103px;
+            }
+
+            #dashboard #menu-top .menu-button:nth-child(2) {
+                right: 52px;
+            }
+
+            #dashboard #menu-top .menu-button:nth-child(3) {
+                right: 1px;
+            }
+
+#scrollpanel-container {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#dashboard #friends {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    overflow: hidden;
+    cursor: pointer;
+    fill: #9a9a9a;
+}
+
+    #dashboard #friends .friend {
+        position: relative;
+        width: 152px;
+        height: 60px;
+        overflow: visible;
+        margin: 1px 1px 0px 1px;
+    }
+
+        #dashboard #friends .friend:hover {
+            background: #e76335;
+            color: white;
+            fill: white;
+        }
+
+        #dashboard #friends .friend .controls {
+            height: 20px;
+            text-align: right;
+        }
+
+        #dashboard #friends .friend .info {
+            height: 45px;
+            margin-top: -5px;
+        }
+
+            #dashboard #friends .friend .info .pic {
+                float: left;
+                width: 40px;
+                height: 40px;
+                padding: 4px 0px 0px 4px;
+            }
+
+            #dashboard #friends .friend .info .name {
+                float: left;
+                width: 110px;
+                height: 40px;
+            }
+
+                #dashboard #friends .friend .info .name > div {
+                    height: 20px;
+                    overflow: hidden;
+                }
+
+        #dashboard #friends .friend .btn-history {
+            padding: 0;
+            margin: -1px 8px 0px 0px;
+            display: none;
+        }
+
+        #dashboard #friends .friend .caret {
+            color: white;
+            margin: 2px 0px 0px -4px;
+        }
+
+.fixed {
+    position: fixed;
+}
+
+#map {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 24px;
+    background: #dbdbdb;
+    border-radius: 0px 2px 2px 0px;
+}
+
+/* Cloud Popup Styles */
+
+.cloud-frame {
+    overflow: hidden;
+}
+
+.cloud-frame .column-1 {
+    float: right;
+    width: 70px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+    .cloud-frame .column-1 > span.name {
+        display: block;
+    }
+
+    .cloud-frame .column-1 > span.update {
+        display: inline-block;
+    }
+
+    .cloud-frame .column-1 > img {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+    }
+
+.cloud-frame .column-2 {
+    float: right;
+    width: 64px;
+}
+
+    .cloud-frame .column-2 > img {
+        width: 64px;
+        height: 64px;
+    }
+
+.cloud-frame.point-info > span.name {
+    display: block;
+}
+
+.cloud-frame.point-info > span.update {
+    display: inline-block;
+}
+
+.cloud-frame.point-info > img {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+
+/* End Cloud Popup Styles */

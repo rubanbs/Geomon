@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Neueu</Name>
+    <RootNamespace>Neueu</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>88bcc7c6-8764-40fc-945f-07b13056097d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>bin\www</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="config\database.js" />
+    <Compile Include="config\passport.js" />
+    <Compile Include="models\user.js" />
+    <Compile Include="public\bower_components\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Compile Include="public\bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Compile Include="public\bower_components\angular-bootstrap\ui-bootstrap.js" />
+    <Compile Include="public\bower_components\angular-bootstrap\ui-bootstrap.min.js" />
+    <Compile Include="public\bower_components\angular-route\angular-route.js" />
+    <Compile Include="public\bower_components\angular-route\angular-route.min.js" />
+    <Compile Include="public\bower_components\angular\angular.js" />
+    <Compile Include="public\bower_components\angular\angular.min.js" />
+    <Compile Include="public\colorpicker\js\colorpicker.js" />
+    <Compile Include="public\js\app-1.0.0.js" />
+    <Compile Include="public\js\jquery-2.1.1.min.js" />
+    <Compile Include="public\js\map-js-module1.0.0.js" />
+    <Compile Include="public\js\map-1.0.0.js" />
+    <Compile Include="public\js\user-1.0.0.js" />
+    <Compile Include="public\js\controllers-1.0.0.js" />
+    <Compile Include="public\openlayers\OpenLayers.js" />
+    <Compile Include="routes\mainRoute.js" />
+    <Compile Include="routes\userRoute.js" />
+    <Compile Include="bin\www" />
+    <Content Include="package.json" />
+    <Content Include="public\bower_components\angular-bootstrap\.bower.json" />
+    <Content Include="public\bower_components\angular-bootstrap\bower.json" />
+    <Content Include="public\bower_components\angular-route\.bower.json" />
+    <Content Include="public\bower_components\angular-route\angular-route.min.js.map" />
+    <Content Include="public\bower_components\angular-route\bower.json" />
+    <Content Include="public\bower_components\angular-route\package.json" />
+    <Content Include="public\bower_components\angular-route\README.md" />
+    <Content Include="public\bower_components\angular\.bower.json" />
+    <Content Include="public\bower_components\angular\angular-csp.css" />
+    <Content Include="public\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="public\bower_components\angular\angular.min.js.map" />
+    <Content Include="public\bower_components\angular\bower.json" />
+    <Content Include="public\bower_components\angular\package.json" />
+    <Content Include="public\bower_components\angular\README.md" />
+    <Content Include="public\colorpicker\css\colorpicker.css" />
+    <Content Include="public\colorpicker\images\blank.gif" />
+    <Content Include="public\colorpicker\images\colorpicker_background.png" />
+    <Content Include="public\colorpicker\images\colorpicker_hex.png" />
+    <Content Include="public\colorpicker\images\colorpicker_hsb_b.png" />
+    <Content Include="public\colorpicker\images\colorpicker_hsb_h.png" />
+    <Content Include="public\colorpicker\images\colorpicker_hsb_s.png" />
+    <Content Include="public\colorpicker\images\colorpicker_indic.gif" />
+    <Content Include="public\colorpicker\images\colorpicker_overlay.png" />
+    <Content Include="public\colorpicker\images\colorpicker_rgb_b.png" />
+    <Content Include="public\colorpicker\images\colorpicker_rgb_g.png" />
+    <Content Include="public\colorpicker\images\colorpicker_rgb_r.png" />
+    <Content Include="public\colorpicker\images\colorpicker_select.gif" />
+    <Content Include="public\colorpicker\images\colorpicker_submit.png" />
+    <Content Include="public\colorpicker\images\custom_background.png" />
+    <Content Include="public\colorpicker\images\custom_hex.png" />
+    <Content Include="public\colorpicker\images\custom_hsb_b.png" />
+    <Content Include="public\colorpicker\images\custom_hsb_h.png" />
+    <Content Include="public\colorpicker\images\custom_hsb_s.png" />
+    <Content Include="public\colorpicker\images\custom_indic.gif" />
+    <Content Include="public\colorpicker\images\custom_rgb_b.png" />
+    <Content Include="public\colorpicker\images\custom_rgb_g.png" />
+    <Content Include="public\colorpicker\images\custom_rgb_r.png" />
+    <Content Include="public\colorpicker\images\custom_submit.png" />
+    <Content Include="public\colorpicker\images\select.png" />
+    <Content Include="public\colorpicker\images\select2.png" />
+    <Content Include="public\colorpicker\images\slider.png" />
+    <Content Include="public\css\main.css" />
+    <Content Include="public\css\map.css" />
+    <Content Include="public\img\ava.png" />
+    <Content Include="public\img\cake_64.png" />
+    <Content Include="public\img\car-icon.png" />
+    <Content Include="public\img\history.svg" />
+    <Content Include="public\img\landscape.svg" />
+    <Content Include="public\img\landscape11.svg" />
+    <Content Include="public\img\man-icon.png" />
+    <Content Include="public\img\man.svg" />
+    <Content Include="public\img\map-md.png" />
+    <Content Include="public\img\map-src.png" />
+    <Content Include="public\img\map.png" />
+    <Content Include="public\img\map.svg" />
+    <Content Include="public\img\marker-icon.png" />
+    <Content Include="public\img\negative-car.png" />
+    <Content Include="public\img\negative-man.png" />
+    <Content Include="public\img\photo.svg" />
+    <Content Include="public\img\portrait.png" />
+    <Content Include="public\img\settings.svg" />
+    <Content Include="public\openlayers\img\bar.png" />
+    <Content Include="public\openlayers\img\cloud-popup-relative.png" />
+    <Content Include="public\openlayers\img\east-mini.png" />
+    <Content Include="public\openlayers\img\north-mini.png" />
+    <Content Include="public\openlayers\img\plus-minus.png" />
+    <Content Include="public\openlayers\img\slider %282%29.png" />
+    <Content Include="public\openlayers\img\slider-.png" />
+    <Content Include="public\openlayers\img\slider.png" />
+    <Content Include="public\openlayers\img\south-mini.png" />
+    <Content Include="public\openlayers\img\Thumbs.db" />
+    <Content Include="public\openlayers\img\west-mini.png" />
+    <Content Include="public\openlayers\img\zoom-minus-mini-.png" />
+    <Content Include="public\openlayers\img\zoom-minus-mini.png" />
+    <Content Include="public\openlayers\img\zoom-plus-mini-.png" />
+    <Content Include="public\openlayers\img\zoom-plus-mini.png" />
+    <Content Include="public\openlayers\img\zoombar-.png" />
+    <Content Include="public\openlayers\img\zoombar.png" />
+    <Content Include="public\openlayers\theme\default\style.css" />
+    <Content Include="README.md" />
+    <Content Include="views\main\about.ejs" />
+    <Content Include="views\main\contacts.ejs" />
+    <Content Include="views\main\home.ejs" />
+    <Content Include="views\main\prices.ejs" />
+    <Content Include="views\main\signup.ejs" />
+    <Content Include="views\main\terms.ejs" />
+    <Content Include="views\user\map.ejs" />
+    <Content Include="views\user\_layout.ejs" />
+    <Content Include="views\error.ejs" />
+    <Content Include="views\_layout.ejs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="config\" />
+    <Folder Include="models\" />
+    <Folder Include="public\" />
+    <Folder Include="public\bower_components\" />
+    <Folder Include="public\bower_components\angular-bootstrap\" />
+    <Folder Include="public\bower_components\angular-route\" />
+    <Folder Include="public\bower_components\angular\" />
+    <Folder Include="public\colorpicker\" />
+    <Folder Include="public\colorpicker\css\" />
+    <Folder Include="public\colorpicker\images\" />
+    <Folder Include="public\colorpicker\js\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\img\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\openlayers\" />
+    <Folder Include="public\openlayers\img\" />
+    <Folder Include="public\openlayers\theme\" />
+    <Folder Include="public\openlayers\theme\default\" />
+    <Folder Include="public\partials\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+    <Folder Include="views\main\" />
+    <Folder Include="views\user\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

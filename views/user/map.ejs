@@ -1,0 +1,143 @@
+﻿
+
+<div class="map-container" ng-controller="UserController">
+
+    <div id="pin-panel">
+        <span>&laquo;</span>
+    </div>
+
+    <div id="dashboard" data-width="154" data-collapsed="false">
+
+        <div id="menu-top">
+            <div class="menu-button" title="Settings" data-toggle="modal" data-target="#settingsModal">
+                <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+                <path id="settings_1_" d="M927.229,446.759l-88.759-14.807c-6.451-26.374-15.857-51.585-28.107-75.099l56.821-70.452 c12.085-14.889,11.536-36.312-1.205-50.682l-35.301-39.73c-12.796-14.355-34.015-17.391-50.202-7.165l-75.906,47.716 c-33.386-23.326-71.204-40.551-112-50.546l-14.85-89.235C574.604,77.864,558.253,64,539.059,64h-53.198 c-19.155,0-35.561,13.864-38.609,32.759l-14.93,89.263c-33.729,8.258-65.353,21.588-94.213,39.144l-72.188-51.518 c-15.558-11.115-36.927-9.377-50.504,4.171l-37.583,37.61c-13.548,13.577-15.286,34.946-4.142,50.504l51.638,72.326 c-17.391,28.642-30.584,60.086-38.841,93.514l-89.743,14.986c-18.866,3.116-32.757,19.469-32.757,38.663v53.156 c0,19.194,13.891,35.547,32.757,38.663l89.743,14.986c6.781,27.507,16.625,53.784,29.709,78.147l-56.562,70.054 c-12.044,14.875-11.538,36.312,1.203,50.669l35.274,39.73c12.797,14.382,34.028,17.363,50.216,7.163l77-48.37 c32.581,22.285,69.44,38.664,108.993,48.37l14.93,89.25C450.3,946.137,466.706,960,485.861,960h53.198 c19.194,0,35.545-13.863,38.661-32.759l14.875-89.25c33.308-8.147,64.531-21.245,93.134-38.5l75.196,53.705 c15.531,11.156,36.915,9.406,50.478-4.185l37.597-37.597c13.533-13.536,15.366-34.893,4.127-50.478l-53.536-75.059 c17.442-28.738,30.704-60.238,38.909-93.816l88.758-14.821c18.921-3.116,32.756-19.469,32.756-38.663v-53.156 C959.987,466.228,946.152,449.875,927.229,446.759z M513.409,680c-92.764,0-168-75.25-168-168c0-92.764,75.236-168,168-168 c92.748,0,167.998,75.236,167.998,168C681.407,604.75,606.157,680,513.409,680z" />
+                </svg>
+            </div>
+        </div>
+
+        <div id="scrollpanel-container">
+
+            <div id="friends">
+
+                <div class="friend" ng-repeat="user in users" ng-click="friendSelected(user);">
+
+                    <div class="controls">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-link dropdown-toggle btn-history" data-toggle="dropdown" aria-expanded="false">
+                                <span>
+                                    <img src="img/history.svg" />
+                                </span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu fixed" role="menu">
+                                <li><a href="#" ng-click="loadHistory(user)">Show history</a></li>
+                                <li><a href="#" ng-click="hideHistory(user)"><i>Hide history...</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="pic">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve">
+                            <g>
+                            <path d="M91.282,1.656H4.718c-1.691,0-3.062,1.37-3.062,3.062v86.564c0,1.691,1.37,3.062,3.062,3.062h86.564 c1.691,0,3.062-1.37,3.062-3.062V4.718C94.344,3.026,92.974,1.656,91.282,1.656z M44.938,86.662L48,67.537l3.063,19.125H44.938z M86.663,86.662h-5.002c-0.037-0.068-0.064-0.139-0.104-0.206L69.712,66.655c-0.717-1.2-1.782-2.052-2.983-2.544l-8.117-3.738 l-3.9-3.289l-6.702,6.665l-6.72-6.665l-3.9,3.289l-8.117,3.738c-1.201,0.492-2.267,1.344-2.983,2.544L14.443,86.456 c-0.04,0.067-0.067,0.138-0.104,0.206H9.337V9.337h77.326V86.662z" />
+                            <path d="M47.955,57.888v0.002c0.009,0,0.017-0.001,0.024-0.001c0.004,0,0.01,0.001,0.015,0.001c0.002,0,0.004,0,0.006,0 s0.004,0,0.006,0c0.005,0,0.01-0.001,0.015-0.001c0.008,0,0.016,0.001,0.023,0.001v-0.002c9.464,0.146,15.216-8.139,15.363-21.794 c0.098-9.474-5.778-14.891-15.347-15.145v-0.005c-0.014,0-0.026,0.002-0.04,0.002v-0.002c-0.007,0-0.014,0-0.021,0.002 c-0.007-0.002-0.014-0.002-0.021-0.002v0.002c-0.014,0-0.026-0.002-0.04-0.002v0.005c-9.568,0.254-15.444,5.671-15.348,15.145 C32.739,49.749,38.492,58.033,47.955,57.888z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="name">
+                            <div>
+                                {{ user.name }}
+                            </div>
+                            <div>
+                                (Online)
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="map"></div>
+
+    <!-- Modal -->
+    <div class="modal" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="settingsModalLabel">Settings</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <div role="tabpanel">
+                                <ul class="nav nav-stacked" role="tablist">
+                                    <li role="presentation" class="active"><a href="#" aria-controls="general" role="tab" data-toggle="tab">General</a></li>
+                                    <!--<li role="presentation"><a href="#" aria-controls="security" role="tab" data-toggle="tab">Security</a></li>-->
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-9">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="general">
+
+
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="name" class="col-sm-2 control-label">Name</label>
+                                            <div class="col-sm-6">
+                                                <input type="name" class="form-control input-sm" id="name" placeholder="Input name" value="{{ myself.name }}">
+                                            </div>
+                                        </div>
+
+                                        <!--<div class="form-group">
+                                            <label class="col-sm-2 control-label">Icon</label>
+                                            <div class="col-sm-10">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                                    <span class="icon-bg" style="display: inline-block; background-color: #45e738;">
+                                                        <img src="img/negative-car.png" style="width: 48px;height: 48px;" />
+                                                    </span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox2" value="option2">
+                                                    <span class="icon-bg" style="display: inline-block; background-color: #45e738; ">
+                                                        <img src="img/negative-man.png" style="width: 48px; height: 48px; " />
+                                                    </span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox3" value="option3">
+                                                    <span class="icon-bg" style="display: inline-block; background-color: #45e738;">
+                                                        <img src="img/negative-car.png" style="width: 48px; height: 48px; " />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>-->
+
+                                    </form>
+
+
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="security">Security</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="saveSettings()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- contentFor('title') %>
+My gps coordinates
