@@ -8,7 +8,7 @@
     "description": "Geomon",
     "author": {
         "name": "Boris",
-        "email": ""
+        "email": "rubanbsgit@gmail.com"
     },
     "dependencies": {
         "express": "~4.9.0",

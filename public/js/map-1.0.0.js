@@ -49,7 +49,7 @@ function Map(defaultCenter) {
     this.osm.addLayer(this.vectorLayer);
 
     this.setCenter = function (lon, lat, zoom) {
-        if (typeof zoom === 'undefined')
+        if (typeof zoom === 'undefined' || !zoom)
             zoom = this.osm.getZoom()
 
         this.osm.setCenter(new OpenLayers.LonLat(lon, lat).transform(this.fromProjection, this.osm.getProjectionObject()), zoom);
@@ -73,7 +73,7 @@ function Map(defaultCenter) {
         } else {
             this.myself = { name: 'test', updateInterval: 30, lon: defaultCenter.lon, lat: defaultCenter.lat }
         }
-        this.setCenter(this.myself.lon, this.myself.lat, defaultCenter.zoom);
+        this.setCenter(this.myself.lon, this.myself.lat, this.myself.update != null ? defaultCenter.zoom : defaultCenter.defaultZoom);
         cb();
     }
 
@@ -172,6 +172,11 @@ function Map(defaultCenter) {
                 instance.myself.lat = newLat;
                 var marker = instance.getMarker(instance.myself._id);
                 instance.moveMarker(marker, newLon, newLat);
+                // First initialization
+                if (instance.myself.update == null) {
+                    instance.setCenter(newLon, newLat, defaultCenter.zoom);
+                    instance.myself.update = new Date();
+                }
 
                 cb({ lon: newLon, lat: newLat });
             });
