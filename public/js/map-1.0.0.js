@@ -1,9 +1,9 @@
 ﻿
-var neueuMap = angular.module('neueuMap', []);
+var geomonMap = angular.module('geomonMap', []);
 
-neueuMap.value("defaultCenter", { lon: 18.088500, lat: 59.310740, defaultZoom: 3, zoom: 15 })
+geomonMap.value("defaultCenter", { lon: 18.088500, lat: 59.310740, defaultZoom: 3, zoom: 15 })
 
-neueuMap.service('map', Map)
+geomonMap.service('map', Map)
 
 function Map(defaultCenter) {
 

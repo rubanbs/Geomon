@@ -8,8 +8,8 @@ describe('Unit Test UserController', function () {
         });
     });
 
-    beforeEach(module('neueuControllers'));
-    beforeEach(module('neueuMap'));
+    beforeEach(module('geomonControllers'));
+    beforeEach(module('geomonMap'));
 
     var ctrl, scope, $httpBackend, $httpHistory;
 

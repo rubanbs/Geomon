@@ -1,9 +1,9 @@
 
-var neueuControllers = angular.module('neueuControllers', [
-    'neueuMap'
+var geomonControllers = angular.module('geomonControllers', [
+    'geomonMap'
 ]);
 
-neueuControllers.controller('UserController', ['$scope', '$http', '$interval', 'map',
+geomonControllers.controller('UserController', ['$scope', '$http', '$interval', 'map',
     function ($scope, $http, $interval, map) {
 
         $http.post('user/load').success(function (response) {

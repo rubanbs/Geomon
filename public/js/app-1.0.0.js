@@ -1,3 +1,3 @@
-var neueuApp = angular.module('neueuApp', [
-    'neueuControllers'
+var geomonApp = angular.module('geomonApp', [
+    'geomonControllers'
 ]);

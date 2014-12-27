@@ -1,6 +1,6 @@
 ﻿module.exports = {
     
-    url : 'mongodb://localhost:27017/neueudb', // template mongodb://<user>:<pass>@server:port/yourdbname
+    url : 'mongodb://localhost:27017/geomondb', // template mongodb://<user>:<pass>@server:port/yourdbname
     
     // Size of history saved.
     // Examples:
