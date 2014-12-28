@@ -61,5 +61,5 @@ npm install -g karma-cli grunt
 * Then navigate to `test` folder and run tests
 ```
 cd test
-karma start karma.cong.js
+karma start karma.conf.js
 ```
