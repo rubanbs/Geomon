@@ -12,8 +12,8 @@ Basic features
 * Version optimized for mobile devices saves traffic and battery charge
 * Sensitive design
 
-<img src="https://github.com/rubanbs/geomon/blob/master/public/img/screenshot-1.png" style="width: 49%;" />
-<img src="https://github.com/rubanbs/geomon/blob/master/public/img/screenshot-2.png" style="width: 49%;" />
+<img src="https://github.com/rubanbs/geomon/blob/master/public/img/screenshot-1.png" style="max-width: 49%;" />
+<img src="https://github.com/rubanbs/geomon/blob/master/public/img/screenshot-2.png" style="max-width: 49%;" />
 
 ## Dev Stack
 
