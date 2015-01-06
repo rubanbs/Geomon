@@ -2,6 +2,7 @@
 var app = require('../app')
 var router = express.Router();
 var configdb = require('../config/database.js');
+var geo = require('../lib/geo.js');
 
 var mongoose = require('mongoose');
 
@@ -31,28 +32,30 @@ router.post('/update', app.isAuthenticated, function (req, res) {
         var lat = req.body.position.lat;
         var update = Date.now();
 
-        // TO+DO too near condition
-        // In future: check if two coordianes are not too close to each other
-        if (true) {
+		user.lon = lon;
+		user.lat = lat;
+		user.update = update;
 
-            user.lon = lon;
-            user.lat = lat;
-            user.update = update;
+		var pos = {
+			lon: lon,
+			lat: lat,
+			update: update
+		}
 
-            var pos = {
-                lon: lon,
-                lat: lat,
-                update: update
-            }
+		if (user.track.length > 0) {
+			var prev = user.track[user.track.length - 1];
+			if (geo.calcCrow(prev.lat, prev.lon, pos.lat, pos.lon) * 1e3 <= configdb.proximity) {
+				user.track.pop();
+			}
+		}
+		
+		user.track.push(pos);
 
-            user.track.push(pos);
+		if (configdb.trackSize >= 0 && user.track.length > configdb.trackSize) {
+			user.track = user.track.slice(-configdb.trackSize);
+		}
 
-            if (configdb.trackSize >= 0 && user.track.length > configdb.trackSize) {
-                user.track = user.track.slice(-configdb.trackSize);
-            }
-
-            user.save()
-        }
+		user.save()
     })
 
     res.json({})
