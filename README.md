@@ -13,7 +13,7 @@ Basic features
 * Sensitive design
 
 [![Screenshot 1][1]][2]
-[1]: 
+[1]: https://github.com/rubanbs/geomon/blob/master/public/img/screenshot-1-sm.png
 [2]: https://github.com/rubanbs/geomon/blob/master/public/img/screenshot-1.png
 [![Screenshot 2][3]][4]
 [3]: https://github.com/rubanbs/geomon/blob/master/public/img/screenshot-2-sm.png
